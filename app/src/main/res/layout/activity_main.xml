@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.iossenac.checkapp.MainActivity">
+
+
+    <CheckBox
+        android:id="@+id/cbxAgua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="79dp"
+        android:text="Água"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="atualizaValorPago"/>
+
+    <CheckBox
+        android:id="@+id/cbxLuz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Luz"
+        android:layout_below="@+id/cbxAgua"
+        android:layout_alignStart="@+id/cbxAgua"
+        android:onClick="atualizaValorPago"/>
+
+    <CheckBox
+        android:id="@+id/cbxTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/cbxLuz"
+        android:onClick="atualizaValorPago"/>
+
+    <CheckBox
+        android:id="@+id/cbxCelular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cbxTelefone"
+        android:layout_below="@+id/cbxTelefone"
+        android:layout_marginTop="44dp"
+        android:text="Celular"
+        android:onClick="atualizaValorPago"/>
+
+    <TextView
+        android:id="@+id/lblContas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cbxAgua"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43dp"
+        android:text="Contas a pagar"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor Total:"
+        android:layout_below="@+id/cbxCelular"
+        android:layout_alignEnd="@+id/cbxCelular"
+        android:layout_marginTop="61dp" />
+
+    <TextView
+        android:id="@+id/lblPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblTotal"
+        android:layout_alignTop="@+id/lblTotal"
+        android:layout_marginTop="30dp"
+        android:text="Valor Pago:" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lblContas"
+        android:layout_alignTop="@+id/lblTotal"
+        android:layout_marginEnd="10dp" />
+
+    <TextView
+        android:id="@+id/txtPago"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/lblContas"
+        android:layout_alignTop="@+id/lblPago"
+        android:layout_marginStart="70dp" />
+
+</RelativeLayout>
